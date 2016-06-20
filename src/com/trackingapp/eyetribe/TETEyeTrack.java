@@ -35,9 +35,9 @@ public class TETEyeTrack {
 	        {
 	        	
 	        	time_now = gazeData.timeStampString;
-				eyex = (int) gazeData.smoothedCoordinates.x;
-				eyey = (int) gazeData.smoothedCoordinates.y;
-				System.out.println("time:"+time_now+", Gaze is here ("+eyex+", "+eyey+")");
+				eyex = (int) gazeData.rawCoordinates.x;
+				eyey = (int) gazeData.rawCoordinates.y;
+				System.out.println("time: "+time_now+", Gaze is here ("+eyex+", "+eyey+")");
 				try {
 					Logger.log("" + time_now + "," + eyex + "," + eyey + "\n");
 				} catch (IOException e) {
