@@ -10,7 +10,10 @@ public class TETEyeTrack {
 	static String time_now;
 	static int eyex;
 	static int eyey;
-	
+	static int gx;
+	static int gy;
+	static int hx;
+	static int hy;
 	
 	public static void gazeMangement() {
 		final GazeManager gm = GazeManager.getInstance();
@@ -37,9 +40,13 @@ public class TETEyeTrack {
 	        	time_now = gazeData.timeStampString;
 				eyex = (int) gazeData.rawCoordinates.x;
 				eyey = (int) gazeData.rawCoordinates.y;
+				gx = (int) gazeData.leftEye.rawCoordinates.x;
+				gy = (int) gazeData.leftEye.rawCoordinates.y;
+				hx = (int) gazeData.rightEye.rawCoordinates.x;
+				hy = (int) gazeData.rightEye.rawCoordinates.y;
 				System.out.println("time: "+time_now+", Gaze is here ("+eyex+", "+eyey+")");
 				try {
-					Logger.log("" + time_now + "," + eyex + "," + eyey + "\n");
+					Logger.log("" + time_now + "," + eyex + "," + eyey + "," + gx + "," +gy +"," + hx + "," + hy + "\n");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
