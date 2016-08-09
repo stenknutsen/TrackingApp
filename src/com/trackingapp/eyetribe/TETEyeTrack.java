@@ -64,7 +64,7 @@ public class TETEyeTrack {
 	
 	 public static void closeApplication(){
 		 System.out.println("Tracking complete.");
-	        System.exit(0);	 
+	     System.exit(0);	 
 	 }//end closeApplication
 
 

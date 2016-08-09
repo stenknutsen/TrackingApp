@@ -54,7 +54,9 @@ public class AppDriver {
 	      
 	      loginButton.addActionListener(new ActionListener() {
 	         public void actionPerformed(ActionEvent e) {     
-	        	 TETEyeTrack.gazeMangement();     
+	        	 statusLabel.setText("Recording started.");
+	        	 TETEyeTrack.gazeMangement(); 
+	        	 
 	         }
 	      }); 
 	      
